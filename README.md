@@ -1,2 +1,0 @@
-# MERNStackTraining2
-MERNStackTraining
