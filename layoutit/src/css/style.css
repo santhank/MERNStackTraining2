@@ -1,0 +1,73 @@
+# Empty CSS file for your own CSS
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+  padding-right: 0;
+  padding-left: 0;
+  width: auto;
+  /*background-color: #000;*/
+  background-color: aliceblue;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 400px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  bottom: 30%;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 400px;
+  background-color: #777;
+  padding: 40px 0px 27px 0px;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  height: 500px;
+    /*top: 0;
+  left: 0;*/
+  width: 100%;
+  /*padding: 25px 25px 27px 27px;*/
+  /* height: 500px; */
+}
+.jumbotron{
+	height: 220px;
+	clear: both;
+    background-color:  #00b300;
+    padding: 25px 0px 0px 0px;
+}
+
+.form-horizontal .form-group {
+    padding: 0px 100px 0px 10px;
+}
+
+.btn-primary {
+    background-color: #004d00;
+    }
