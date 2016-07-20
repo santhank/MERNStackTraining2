@@ -1,0 +1,161 @@
+var fs = require('fs');
+fs.readFile('India2011test.csv', function(err, data) {
+    if(err) throw err;
+    var array = data.toString().split("\n");
+    var keyarray = new Array();
+    var keyelement;
+    var linearray = new Array();
+
+    for(i in array) {
+        //console.log(array[i]);
+        //console.log(i);
+        if(i == 0){
+        	keyarray = array[i];
+        	keyelement = keyarray[i]
+        	console.log(keyelement);
+        	//console.log(keyarray);
+        	}
+    	else{
+    		linearray = array[i];
+    		console.log(linearray)
+    	}
+    }
+});
+
+
+
+
+
+
+
+fs = require('fs')
+fs.readFile('/vagrant/javascriptAssignment/indicatorstest.csv', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(data);
+});
+
+var KeyArray=new Array();
+
+
+
+
+
+
+
+
+try 2:
+
+var len=10;
+//var fabarray = new Array;
+var a=0;
+var b=1;
+var c;
+var i =0;
+var d = new Array("*");
+//console.log(0);
+//console.log(1);
+for (i=0;i<len;i++) {
+	//console.log(i);
+	//fabarray.push[i]= a ;
+	c=a+b;
+	a=b;
+	b=c;
+	//console.log(c);
+	for (c;c<len;c++){
+		//d.push="*";
+		console.log(d);
+	}
+	console.log("\n")
+}
+
+
+flatten:
+
+var myObj = [5, [22], [[14]], [[4]],[5,6]];
+//console.log(myObj.length);
+var flatarray= [];
+var temparray = [];
+var myObjlen=myObj.length;
+for (i=1;i<myObjlen;i++){
+	temparray=myObj[i];
+	console.log('temp',temparray[0]);
+	len=temparray.length;
+	//console.log(len)
+	for(j=0;j<len;j++) {
+		flatarray.push(temparray[j]);
+		//console.log(temparray[j]);
+	}
+}	
+console.log(flatarray);
+
+
+***********
+var myObj = [5, [22], [[14]], [[4]],[5,6]];
+//console.log(myObj.length);
+var flatarray= [];
+var temparray = [];
+var myObjlen=myObj.length;
+flatarray=myObj.split(",");
+console.log(flatarray);
+
+**********
+
+var myObj = [5, [22], [[14]], [[4]],[5,6]];
+//console.log(myObj.length);
+var flatarray= [];
+var temparray = [];
+var myObjlen=myObj.length;
+for (i=0;i<myObjlen;i++){
+	temparray=myObj[i];
+	//console.log('temp',temparray[0]);
+	//console.log(len)
+	if (temparray.length == undefined) {
+		flatarray.push(temparray);
+		//console.log(temparray);
+		}
+	else {
+		len=temparray.length;
+		for(j=0;j<len;j++) {
+	
+		flatarray.push(temparray[j]);
+		//console.log(temparray[j]);
+		}
+	}
+}	
+console.log(flatarray);
+
+*********
+
+var myObj = [5, [22], [[14]], [[4]],[5,6]];
+//console.log(myObj.length);
+var flatarray= [];
+var temparray = [];
+var myObjlen=myObj.length;
+for (i=0;i<myObjlen;i++){
+	temparray=myObj[i];
+	//console.log('temp',temparray[0]);
+	//console.log(len)
+	if (temparray.length == undefined) {
+		flatarray.push(temparray);
+		//console.log(temparray);
+		}
+	else {
+		for(j=0;j<temparray.length;j++) {
+		flatarray.push(temparray[j]);
+		console.log(temparray[j]);
+		console.log(temparray.length);
+		}
+	}
+}	
+console.log(flatarray);
+
+
+Question 4
+10:48 var myObj =[{'name':'Saurabh', 'age': 30, 'occupation': "Team Leader"},{'name':'Anupriya', 'age': 32, 'occupation': "Team Leader"},{'name':'Kalyani', 'age': 25, 'occupation': "Programmer"},{'name':'Damodaran', 'age': 27, 'occupation': "Programmer"},{'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},{'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
+Exercise 1: Display all objects with occupation as 'Programmer'
+Exercise 2: Sort the object basis the age key in the descending order
+Exercise 3: Recreate the above array of objects into the following object of objects :{ 'Team Leader' : [{'name':_____________, 'age':__________},{'name':_____________, 'age':__________}],
+'Programmer' : [{'name':_____________, 'age':__________},{'name':_____________, 'age':__________}],
+

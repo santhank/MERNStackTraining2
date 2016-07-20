@@ -1,0 +1,31 @@
+var fs = require('fs');
+fs.readFile('India2011test.csv', function(err, data) {
+    if(err) throw err;
+    var lines = data.toString().split("\n");
+    var keyarray = new Array();
+    var keyelement = new Array;
+    var linearray = new Array();
+    var elementarray =new Array();
+    var jasonrec = new Array();
+    var objrec=();
+    for(i in lines) {
+        //console.log(array[i]);
+        //console.log(i);
+        if(i == 0){
+        	keyarray = lines[i];
+        	keyelement = keyarray.split(",")
+        	console.log(keyelement);
+        	//console.log(keyarray);
+        	}
+    	else{
+    		for (j=1 in lines){
+
+    		linearray = lines[j];
+    		elementarray = linearray.split(",")
+    		
+    		console.log(elementarray);
+    		//console.log(linearray)
+    		}
+    	}
+    }
+});

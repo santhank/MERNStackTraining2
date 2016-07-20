@@ -1,0 +1,22 @@
+//* fs.readFile('/vagrant/javascriptAssignment/indicatorstest.csv', (err, data) => {
+  if (err) throw err;
+  console.log(data);
+});*//
+//*alert("test");*//
+
+
+fs = require('fs')
+fs.readFile('/etc/hosts', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(data);
+});
+
+
+
+console.log("data");
+fs.readFile('/vagrant/javascriptAssignment/indicatorstest.csv', (err, data){
+  if (err) throw err;
+  console.log(data);
+  });

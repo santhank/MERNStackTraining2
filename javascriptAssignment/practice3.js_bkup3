@@ -1,0 +1,69 @@
+var fs = require('fs');
+fs.readFile('India2011test.csv', function(err, data) {
+    if(err) throw err;
+    var lines = data.toString().split("\n");
+    var keyarray = new Array();
+    var keyelement = new Array;
+    var linearray = new Array();
+    var elementarray =new Array();
+    var jasonrec = new Array();
+    var objrec=[];
+    var datasetarray=[];
+    for(var i in lines) {
+        //console.log(array[i]);
+        //console.log(i);
+        if(i == 0){   //header 
+        	keyarray = lines[i];
+        	keyelement = keyarray.split(",")
+        	console.log(keyelement);
+        	//console.log(keyarray);
+        	}
+    	else{
+    		for (var j=1;j<lines.length;j++){
+            console.log(j);
+    		linearray = lines[j];
+            var elementarray=new Array();
+    		elementarray = linearray.split(",");
+    		datasetarray.push(elementarray);
+    		//console.log(elementarray);
+    		//console.log(linearray)
+    		}
+    	}
+    }
+    console.log("-------------------------------");
+    //console.log(datasetarray[0][3]);
+    //console.log(datasetarray[0][5]);
+    //console.log(datasetarray[0][9]);
+    //console.log("-------------------------------");
+    //console.log(datasetarray);
+
+
+
+        var stastsDataObj=function(state,age, population){
+            this.state=state;
+            this.Age=age;
+            this.population=population;
+          } 
+
+           //var jsonObj={};
+           var arrObj=[];
+       for(var x=0;x<datasetarray.length;x++){
+        console.log(datasetarray.length);
+         //arrObj.push(new stastsDataObj("0-8","123456"));
+         //arrObj.push(new stastsDataObj("0-9","90909"));
+         //arrObj.push(new stastsDataObj("0-10","678"));
+         //console.log(datasetarray.row[3])
+         //arrObj.push(new stastsDataObj(datasetarray[x][3],datasetarray[x][5],datasetarray[x][9]));
+        
+
+       }
+   console.log(arrObj);
+    //jsonObj.name=arrObj;
+    //console.log("json obje====>",JSON.stringify(jsonObj));
+
+
+
+
+
+
+});
