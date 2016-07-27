@@ -7,12 +7,9 @@ var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
-var studentstest = require('./routes/studentstest');
-var urlbuild = require('./routes/urlbuild');
-var mongosample = require('./routes/mongosample');
-var movieurlcrud = require('./routes/movieurlcrud');
-var movieurldata = require('./routes/movieurldata');
+
+var addmailtodb = require('./routes/addmailtodb');
+
 
 var app = express();
 
@@ -26,7 +23,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
+app.use("/",express.static(path.join(__dirname, '../Client/dist')));
+app.use("/Inbox",express.static(path.join(__dirname, '../Client/dist')));
+app.use("/Sent",express.static(path.join(__dirname, '../Client/dist')));
 
 // Mongo db open
 mongoose.connect('mongodb://localhost/mydatabase')
@@ -37,12 +37,7 @@ console.log("connected to mongodb");
 })
 
 app.use('/', routes);
-app.use('/users', users);
-app.use('/studentstest', studentstest);
-app.use('/urlbuild', urlbuild);
-app.use('/mongosample', mongosample);
-app.use('/movieurlcrud', movieurlcrud);
-app.use('/movieurldata', movieurldata);
+app.use('/addmailtodb', addmailtodb);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
